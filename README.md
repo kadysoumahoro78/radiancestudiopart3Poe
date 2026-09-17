@@ -62,14 +62,14 @@ Radiance studio/
 No build step is required — it's static HTML/CSS.
 
 1. Download or clone the repository.
-2. Open `home page.html` in a browser, **or**
+2. Open `home page.html` in a browser
 
 ## Design notes
 
 The colour palette (plum, rose/pink, gold, brown, cream, ivory) and studio
 branding were kept consistent from Part 1 and carried through every page.
 Part 2 focused on turning the Part 1 skeleton into a fully styled,
-responsive, professional site — see `CHANGELOG.md` for the detailed list of
+responsive, professional site — see `CHANGELOG doucument` for the detailed list of
 changes.
 
 ## Author
