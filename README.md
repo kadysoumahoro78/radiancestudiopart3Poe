@@ -1,5 +1,6 @@
 # Radiance Studio — Website
 
+<<<<<<< HEAD
 A responsive, multi-page website for Radiance Studio, a hair studio based in
 Johannesburg (Sandton and Rosebank). Built for the WEDE5020 (Web Development
 Introduction) Portfolio of Evidence — Part 2 (styling) and Part 3
@@ -11,11 +12,23 @@ The site introduces the salon, lists services and pricing, showcases a gallery
 of past work, and gives visitors two ways to get in touch: an online service
 enquiry (instant cost estimate and availability) and a contact page with an
 interactive map and a message form.
+=======
+A responsive multi-page website for Radiance Studio, a hair studio based in
+Johannesburg. Built for the WEDE5020 (Web Development Introduction) Portfolio
+of Evidence, Part 2.
+
+## About the project
+
+Radiance Studio's site introduces the salon, lists services and pricing,
+showcases a gallery of past work, and gives visitors two ways to get in touch
+— a service enquiry form and a contact/locations page.
+>>>>>>> origin/master
 
 ## Pages
 
 | Page | File | Purpose |
 |---|---|---|
+<<<<<<< HEAD
 | Home | `index.html` | Studio introduction, highlights, services preview, FAQ accordion |
 | About Us | `about.html` | Studio story, mission & vision, team profiles |
 | Services | `services.html` | Dynamic price list with tabs, search, sorting and detail pop-ups |
@@ -108,16 +121,44 @@ Full details and the keyword research are in `SEO.md`. In short:
 > `sitemap.xml`, `robots.txt` and structured data is a **placeholder**. Replace
 > it with the real address when the site is published.
 
+=======
+| Home | `home page.html` | Studio introduction, highlights, services preview |
+| About Us | `about us.html` | Studio story, mission & vision, team profiles |
+| Services | `services.html` | Full price list by category |
+| Gallery | `gallery.html` | Photo gallery of past transformations |
+| Enquiry | `enquiry.html` | Service enquiry form |
+| Contact | `contact.html` | Studio locations, hours and embedded maps |
+
+## Tech stack
+
+- **HTML5** — semantic page structure
+- **CSS3** — a single external stylesheet (`CSS/style.css`) with:
+  - CSS custom properties for a shared colour and type system
+  - Flexbox and CSS Grid for layout
+  - Pseudo-classes/elements (`:hover`, `:focus-visible`, `:active`,
+    `:nth-child`, `:last-child`, `::before`, `::after`, `::marker`,
+    `::selection`) for interactive and decorative styling
+  - Two responsive breakpoints (tablet ≤900px, mobile ≤600px) covering
+    layout, typography, navigation, and image/media adjustments
+- **Google Fonts** — Cormorant Garamond (headings) and Jost (body text)
+
+>>>>>>> origin/master
 ## Folder structure
 
 ```
 Radiance studio/
+<<<<<<< HEAD
 ├── index.html
 ├── about.html
+=======
+├── home page.html
+├── about us.html
+>>>>>>> origin/master
 ├── services.html
 ├── gallery.html
 ├── enquiry.html
 ├── contact.html
+<<<<<<< HEAD
 ├── robots.txt
 ├── sitemap.xml
 ├── CSS/
@@ -135,10 +176,24 @@ Radiance studio/
 ├── CHANGELOG.md           (repository root)
 ├── REFERENCES.md          (repository root)
 └── SEO.md                 (repository root)
+=======
+├── CSS/
+│   └── style.css
+├── IMAGES/
+│   ├── studioo.png
+│   ├── baleb.jpg / diffstyles.jpg / menbraids.jpg / locs.jpg / wigs.jpg / dye.jpg
+│   └── Download.mp4
+├── DOCUMENTS/
+│   └── Radiance Studio Proposal.pdf
+├── README.md
+├── CHANGELOG.md
+└── REFERENCES.md
+>>>>>>> origin/master
 ```
 
 ## Running the site locally
 
+<<<<<<< HEAD
 No build step is required — it is static HTML, CSS and JavaScript.
 
 1. Download or clone the repository.
@@ -344,6 +399,20 @@ Corrections and improvements made to what was submitted in Part 2:
 - Known limitations carried into Part 2: no external stylesheet, no responsive
   behaviour, no consistent type/colour/spacing system, broken stylesheet/script
   references on the Enquiry page, no README/changelog/references.
+=======
+No build step is required — it's static HTML/CSS.
+
+1. Download or clone the repository.
+2. Open `home page.html` in a browser
+
+## Design notes
+
+The colour palette (plum, rose/pink, gold, brown, cream, ivory) and studio
+branding were kept consistent from Part 1 and carried through every page.
+Part 2 focused on turning the Part 1 skeleton into a fully styled,
+responsive, professional site — see `CHANGELOG doucument` for the detailed list of
+changes.
+>>>>>>> origin/master
 
 ## Author
 
