@@ -1,17 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css"> 
-    <title>GALLERY</title>
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery | Braids, Locs &amp; Wig Styles | Radiance Studio</title>
+    <meta name="description" content="See our work: balayage braids, men's braids, coloured locs, wig installations and hair colour transformations from Radiance Studio, Johannesburg.">
+    <meta name="keywords" content="braids gallery, locs colouring, wig installation photos, mens braids, hair colour inspiration Johannesburg">
+    <meta name="author" content="Radiance Studio">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#3b1f2b">
+    <link rel="canonical" href="https://radiancestudio.example/gallery.html">
+
+    <!-- Security: restrict where scripts, styles, images and forms may load from / post to -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; media-src 'self'; connect-src 'self' https://formspree.io; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto: https://formspree.io">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Radiance Studio">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Gallery | Braids, Locs &amp; Wig Styles | Radiance Studio">
+    <meta property="og:description" content="See our work: balayage braids, men's braids, coloured locs, wig installations and hair colour transformations from Radiance Studio, Johannesburg.">
+    <meta property="og:url" content="https://radiancestudio.example/gallery.html">
+    <meta property="og:image" content="https://radiancestudio.example/IMAGES/balayage-braids-johannesburg.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gallery | Braids, Locs &amp; Wig Styles | Radiance Studio">
+    <meta name="twitter:description" content="See our work: balayage braids, men's braids, coloured locs, wig installations and hair colour transformations from Radiance Studio, Johannesburg.">
+    <meta name="twitter:image" content="https://radiancestudio.example/IMAGES/balayage-braids-johannesburg.jpg">
+
+    <link rel="icon" type="image/png" href="IMAGES/favicon.png">
+    <link rel="apple-touch-icon" href="IMAGES/radiance-studio-logo-220.png">
+
+    <!-- Performance: warm up the font connection, then load the stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Jost:wght@300;400;500;600&amp;display=swap">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="js/vendor/jquery.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header>
-        <img src="IMAGES/studioo.png" alt="Radiance Studio Logo" class="logo">
-        <nav>
-            <a href="home page.html">home</a>
-            <a href="about us.html">about us</a>
-            <a href="services.html">service</a>
+        <a class="brand" href="index.html" aria-label="Radiance Studio, home">
+            <picture>
+                <source srcset="IMAGES/radiance-studio-logo-220.webp" type="image/webp">
+                <img src="IMAGES/radiance-studio-logo-220.png" alt="Radiance Studio logo" class="logo" width="110" height="110">
+            </picture>
+        </a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav id="site-nav" aria-label="Main navigation">
+            <a href="index.html">home</a>
+            <a href="about.html">about us</a>
+            <a href="services.html">services</a>
             <a href="gallery.html" aria-current="page">gallery</a>
             <a href="enquiry.html">enquiry</a>
             <a href="contact.html">contact</a>
@@ -19,56 +63,126 @@
     </header>
 
     <div class="hero-intro">
-        <h1>Radiance Studio</h1>
+        <p class="eyebrow">Hair studio &middot; Johannesburg</p>
+        <h1>Our Gallery</h1>
         <p class="tagline">Keeping the Radiance of Your Hair</p>
     </div>
 
-    <main>
+    <main id="main">
 
         <section id="gallery-intro">
             <h2>Our Work</h2>
             <p>
                 Take a look at some of our favourite transformations. From bold colour changes to
                 classic cuts and elegant updos, every style in our gallery was created right here
-                in our studio.
+                in our studio. Select a photo to view it larger.
             </p>
         </section>
 
         <section id="gallery-grid">
+            <div class="chips" role="group" aria-label="Filter gallery by style">
+                <button type="button" class="chip is-active" data-filter="all" aria-pressed="true">All</button>
+                <button type="button" class="chip" data-filter="braids" aria-pressed="false">Braids</button>
+                <button type="button" class="chip" data-filter="locs" aria-pressed="false">Locs</button>
+                <button type="button" class="chip" data-filter="wigs" aria-pressed="false">Wigs</button>
+                <button type="button" class="chip" data-filter="colour" aria-pressed="false">Colour</button>
+            </div>
+            <p id="gallery-count" class="small" role="status" aria-live="polite"></p>
             <div class="gallery">
-                <figure>
-                    <img src="IMAGES/baleb.jpg" alt="Balayage braids transformation">
+                <figure data-category="braids">
+                    <a class="lightbox-link" href="IMAGES/balayage-braids-johannesburg.jpg">
+                        <picture>
+                            <source srcset="IMAGES/balayage-braids-johannesburg-640.webp" type="image/webp">
+                            <img src="IMAGES/balayage-braids-johannesburg-640.jpg" alt="Collage of a woman with long wavy chestnut and caramel balayage hair, shown from the back and side" width="640" height="1137" decoding="async">
+                        </picture>
+                    </a>
                     <figcaption>Balayage Braids</figcaption>
                 </figure>
-                <figure>
-                    <img src="IMAGES/diffstyles.jpg" alt="Different braiding styles">
+                <figure data-category="braids">
+                    <a class="lightbox-link" href="IMAGES/braiding-styles-menu.jpg">
+                        <picture>
+                            <source srcset="IMAGES/braiding-styles-menu-640.webp" type="image/webp">
+                            <img src="IMAGES/braiding-styles-menu-640.jpg" alt="Chart of popular braid styles including knotless braids, goddess braids, boho braids and passion twists" width="640" height="1137" decoding="async">
+                        </picture>
+                    </a>
                     <figcaption>Different Braiding Styles</figcaption>
                 </figure>
-                <figure>
-                    <img src="IMAGES/menbraids.jpg" alt="men's braids">
+                <figure data-category="braids">
+                    <a class="lightbox-link" href="IMAGES/mens-cornrow-braids.jpg">
+                        <picture>
+                            <source srcset="IMAGES/mens-cornrow-braids-640.webp" type="image/webp">
+                            <img src="IMAGES/mens-cornrow-braids-640.jpg" alt="Man with a patterned cornrow braid style photographed from above" width="640" height="1007" loading="lazy" decoding="async">
+                        </picture>
+                    </a>
                     <figcaption>Men's Braids</figcaption>
                 </figure>
-                <figure>
-                    <img src="IMAGES/locs.jpg" alt="locs hair colouring">
+                <figure data-category="locs">
+                    <a class="lightbox-link" href="IMAGES/coloured-locs-burgundy.jpg">
+                        <picture>
+                            <source srcset="IMAGES/coloured-locs-burgundy-640.webp" type="image/webp">
+                            <img src="IMAGES/coloured-locs-burgundy-640.jpg" alt="Woman with burgundy red coloured locs tied up in a ponytail" width="640" height="853" loading="lazy" decoding="async">
+                        </picture>
+                    </a>
                     <figcaption>Locs Colouring</figcaption>
                 </figure>
-                <figure>
-                    <img src="IMAGES/wigs.jpg" alt="Wig installation">
+                <figure data-category="wigs">
+                    <a class="lightbox-link" href="IMAGES/wig-installation-lace-front.jpg">
+                        <picture>
+                            <source srcset="IMAGES/wig-installation-lace-front-640.webp" type="image/webp">
+                            <img src="IMAGES/wig-installation-lace-front-640.jpg" alt="Hand holding a honey-blonde highlighted lace-front wig with long body waves" width="640" height="853" loading="lazy" decoding="async">
+                        </picture>
+                    </a>
                     <figcaption>Wig Installation</figcaption>
                 </figure>
-                <figure>
-                    <img src="IMAGES/dye.jpg" alt="Dye treatment result">
+                <figure data-category="colour">
+                    <a class="lightbox-link" href="IMAGES/hair-colour-inspiration.jpg">
+                        <picture>
+                            <source srcset="IMAGES/hair-colour-inspiration-640.webp" type="image/webp">
+                            <img src="IMAGES/hair-colour-inspiration-640.jpg" alt="Collage of hair colour inspiration in orange, purple, teal, pink and blonde shades" width="640" height="1137" loading="lazy" decoding="async">
+                        </picture>
+                    </a>
                     <figcaption>Dye Treatment</figcaption>
                 </figure>
             </div>
         </section>
 
         <section id="gallery-outro">
-            <p>Love what you see? <a class="btn" href="enquiry.html">Get in touch</a> to book your own transformation.</p>
+            <p>Love what you see? <a class="btn" href="enquiry.html">Get in touch</a> to book your own transformation, or check our <a href="services.html">prices</a> first.</p>
         </section>
+
     </main>
 
-    <footer>&copy;ST10524275</footer>
-    
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-brand">Radiance Studio</p>
+                <p>Keeping the Radiance of Your Hair</p>
+                <p class="footer-small">Braiding, locs, colour, wigs and treatments in Johannesburg.</p>
+            </div>
+            <div>
+                <p class="footer-title">Explore</p>
+                <ul class="footer-links">
+                    <li><a href="services.html">Services &amp; prices</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Online enquiry</a></li>
+                    <li><a href="about.html">Meet the team</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-title">Visit us</p>
+                <p class="footer-small">Sandton: 14 Rivonia Road<br>011 555 0182<br>Rosebank: 22 Baker Street<br>011 555 0247<br>Mon &ndash; Sat, 08:00 &ndash; 18:00</p>
+            </div>
+            <div>
+                <p class="footer-title">Share this page</p>
+                <ul class="share-links">
+                    <li><a data-share="facebook" href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a data-share="whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a data-share="pinterest" href="https://pinterest.com/pin/create/button/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+                    <li><a data-share="x" href="https://twitter.com/intent/tweet" target="_blank" rel="noopener noreferrer">X</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy;ST10524275</p>
+    </footer>
 </body>
 </html>

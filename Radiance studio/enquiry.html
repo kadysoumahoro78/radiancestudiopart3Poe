@@ -1,17 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    
-    <title>ENQUIRY</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enquire Online | Get a Quote | Radiance Studio</title>
+    <meta name="description" content="Enquire about braiding, locs, colouring, treatments or bridal hair at Radiance Studio. Get an instant estimated cost and appointment availability.">
+    <meta name="keywords" content="hair salon enquiry, braiding quote Johannesburg, book hair appointment Sandton, bridal hair enquiry Rosebank">
+    <meta name="author" content="Radiance Studio">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#3b1f2b">
+    <link rel="canonical" href="https://radiancestudio.example/enquiry.html">
+
+    <!-- Security: restrict where scripts, styles, images and forms may load from / post to -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; media-src 'self'; connect-src 'self' https://formspree.io; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto: https://formspree.io">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Radiance Studio">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Enquire Online | Get a Quote | Radiance Studio">
+    <meta property="og:description" content="Enquire about braiding, locs, colouring, treatments or bridal hair at Radiance Studio. Get an instant estimated cost and appointment availability.">
+    <meta property="og:url" content="https://radiancestudio.example/enquiry.html">
+    <meta property="og:image" content="https://radiancestudio.example/IMAGES/balayage-braids-johannesburg.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Enquire Online | Get a Quote | Radiance Studio">
+    <meta name="twitter:description" content="Enquire about braiding, locs, colouring, treatments or bridal hair at Radiance Studio. Get an instant estimated cost and appointment availability.">
+    <meta name="twitter:image" content="https://radiancestudio.example/IMAGES/balayage-braids-johannesburg.jpg">
+
+    <link rel="icon" type="image/png" href="IMAGES/favicon.png">
+    <link rel="apple-touch-icon" href="IMAGES/radiance-studio-logo-220.png">
+
+    <!-- Performance: warm up the font connection, then load the stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Jost:wght@300;400;500;600&amp;display=swap">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="js/vendor/jquery.min.js" defer></script>
+    <script src="js/services-data.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/forms.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header>
-        <img src="IMAGES/studioo.png" alt="Radiance Studio Logo" class="logo">
-        <nav>
-            <a href="home page.html">home</a>
-            <a href="about us.html">about us</a>
-            <a href="services.html">service</a>
+        <a class="brand" href="index.html" aria-label="Radiance Studio, home">
+            <picture>
+                <source srcset="IMAGES/radiance-studio-logo-220.webp" type="image/webp">
+                <img src="IMAGES/radiance-studio-logo-220.png" alt="Radiance Studio logo" class="logo" width="110" height="110">
+            </picture>
+        </a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav id="site-nav" aria-label="Main navigation">
+            <a href="index.html">home</a>
+            <a href="about.html">about us</a>
+            <a href="services.html">services</a>
             <a href="gallery.html">gallery</a>
             <a href="enquiry.html" aria-current="page">enquiry</a>
             <a href="contact.html">contact</a>
@@ -19,59 +65,123 @@
     </header>
 
     <div class="hero-intro">
-        <h1>Radiance Studio</h1>
+        <p class="eyebrow">Hair studio &middot; Johannesburg</p>
+        <h1>Enquire Online</h1>
         <p class="tagline">Keeping the Radiance of Your Hair</p>
     </div>
 
-    <main>
+    <main id="main">
 
         <section id="enquiry-intro">
             <h2>Service Enquiry</h2>
             <p>
-                Interested in one of our services? Fill in the form below and one of our stylists
-                will get back to you with availability and pricing tailored to your hair.
+                Interested in one of our services? Fill in the form below and we will show you an
+                estimated cost and available appointment times straight away. One of our stylists
+                will then confirm everything with you. Not sure what you need? Browse our
+                <a href="services.html">services and prices</a> first.
             </p>
         </section>
 
         <section id="enquiry-form">
-            <form action="#" method="post">
-                <label for="ename">Full Name</label>
-                <input type="text" id="ename" name="ename" required>
+            <div class="form-layout">
+                <form id="enquiry-form-el" action="https://formspree.io/f/REPLACE_WITH_FORM_ID" method="post">
+                    <div class="field">
+                        <label for="ename">Full Name</label>
+                        <input type="text" id="ename" name="ename" required minlength="2" maxlength="60" autocomplete="name">
+                    </div>
+                    <div class="field">
+                        <label for="eemail">Email Address</label>
+                        <input type="email" id="eemail" name="eemail" required maxlength="254" autocomplete="email">
+                    </div>
+                    <div class="field">
+                        <label for="ephone">Phone Number</label>
+                        <input type="tel" id="ephone" name="ephone" required inputmode="tel" autocomplete="tel"
+                               pattern="(\+27|0027|0)[\s\-]?[1-9]([\s\-]?\d){8}" title="A South African number, e.g. 082 123 4567" placeholder="082 123 4567">
+                    </div>
+                    <div class="field">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Select a service --</option>
+                            <option value="braiding">Braiding &amp; Styling</option>
+                            <option value="colouring">Colouring</option>
+                            <option value="treatments">Hair Treatment</option>
+                            <option value="extras">Extensions &amp; Bridal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="field" id="hairlength-field" hidden>
+                        <label for="hairlength">Hair Length</label>
+                        <select id="hairlength" name="hairlength">
+                            <option value="">-- Select hair length --</option>
+                            <option value="short">Short / ear length</option>
+                            <option value="shoulder">Shoulder length</option>
+                            <option value="mid">Mid-back</option>
+                            <option value="waist">Waist length or longer</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="date">Preferred Date <span class="optional">(optional, Mon &ndash; Sat)</span></label>
+                        <input type="date" id="date" name="date">
+                    </div>
+                    <div class="field">
+                        <label for="location">Preferred Location</label>
+                        <select id="location" name="location" required>
+                            <option value="sandton">Sandton Studio</option>
+                            <option value="rosebank">Rosebank Studio</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="emessage">Additional Details <span class="optional">(optional)</span></label>
+                        <textarea id="emessage" name="emessage" rows="5" maxlength="500" placeholder="Tell us more about what you're looking for..."></textarea>
+                    </div>
+                    <div class="field check">
+                        <input type="checkbox" id="econsent" name="econsent" required>
+                        <label for="econsent">I am happy for Radiance Studio to contact me about this enquiry.</label>
+                    </div>
+                    <div class="hp" aria-hidden="true">
+                        <label for="website">Leave this field empty</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <button type="submit">Submit Enquiry</button>
+                </form>
 
-                <label for="eemail">Email Address</label>
-                <input type="email" id="eemail" name="eemail" required>
-
-                <label for="ephone">Phone Number</label>
-                <input type="tel" id="ephone" name="ephone" required>
-
-                <label for="service">Service Interested In</label>
-                <select id="service" name="service" required>
-                    <option value="">-- Select a service --</option>
-                    <option value="haircut">Haircut &amp; Styling</option>
-                    <option value="colour">Colouring</option>
-                    <option value="treatment">Hair Treatment</option>
-                    <option value="extensions">Extensions</option>
-                    <option value="bridal">Bridal Hair</option>
-                    <option value="other">Other</option>
-                </select>
-
-                <label for="date">Preferred Date</label>
-                <input type="date" id="date" name="date">
-
-                <label for="location">Preferred Location</label>
-                <select id="location" name="location">
-                    <option value="sandton">Sandton Studio</option>
-                    <option value="rosebank">Rosebank Studio</option>
-                </select>
-
-                <label for="emessage">Additional Details</label>
-                <textarea id="emessage" name="emessage" rows="5" placeholder="Tell us more about what you're looking for..."></textarea>
-
-                <button type="submit">Submit Enquiry</button>
-            </form>
+                <aside id="enquiry-result" class="result-panel" aria-live="polite" tabindex="-1" hidden></aside>
+            </div>
         </section>
+
     </main>
 
-    <footer>&copy;ST10524275</footer>
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-brand">Radiance Studio</p>
+                <p>Keeping the Radiance of Your Hair</p>
+                <p class="footer-small">Braiding, locs, colour, wigs and treatments in Johannesburg.</p>
+            </div>
+            <div>
+                <p class="footer-title">Explore</p>
+                <ul class="footer-links">
+                    <li><a href="services.html">Services &amp; prices</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Online enquiry</a></li>
+                    <li><a href="about.html">Meet the team</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-title">Visit us</p>
+                <p class="footer-small">Sandton: 14 Rivonia Road<br>011 555 0182<br>Rosebank: 22 Baker Street<br>011 555 0247<br>Mon &ndash; Sat, 08:00 &ndash; 18:00</p>
+            </div>
+            <div>
+                <p class="footer-title">Share this page</p>
+                <ul class="share-links">
+                    <li><a data-share="facebook" href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a data-share="whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a data-share="pinterest" href="https://pinterest.com/pin/create/button/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+                    <li><a data-share="x" href="https://twitter.com/intent/tweet" target="_blank" rel="noopener noreferrer">X</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy;ST10524275</p>
+    </footer>
 </body>
 </html>

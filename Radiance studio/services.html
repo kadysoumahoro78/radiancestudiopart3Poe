@@ -1,18 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css"> 
-    <title>Service</title>
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services &amp; Prices | Braids, Colour, Wigs | Radiance Studio</title>
+    <meta name="description" content="Browse Radiance Studio's price list: braiding, locs, colouring, treatments, wig installation and bridal hair in Johannesburg. Search, sort and enquire online.">
+    <meta name="keywords" content="hair prices Johannesburg, braiding prices, locs styling, balayage price, wig installation Sandton, keratin treatment, bridal hair Rosebank">
+    <meta name="author" content="Radiance Studio">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#3b1f2b">
+    <link rel="canonical" href="https://radiancestudio.example/services.html">
+
+    <!-- Security: restrict where scripts, styles, images and forms may load from / post to -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; media-src 'self'; connect-src 'self' https://formspree.io; frame-src https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto: https://formspree.io">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Radiance Studio">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Services &amp; Prices | Braids, Colour, Wigs | Radiance Studio">
+    <meta property="og:description" content="Browse Radiance Studio's price list: braiding, locs, colouring, treatments, wig installation and bridal hair in Johannesburg. Search, sort and enquire online.">
+    <meta property="og:url" content="https://radiancestudio.example/services.html">
+    <meta property="og:image" content="https://radiancestudio.example/IMAGES/balayage-braids-johannesburg.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services &amp; Prices | Braids, Colour, Wigs | Radiance Studio">
+    <meta name="twitter:description" content="Browse Radiance Studio's price list: braiding, locs, colouring, treatments, wig installation and bridal hair in Johannesburg. Search, sort and enquire online.">
+    <meta name="twitter:image" content="https://radiancestudio.example/IMAGES/balayage-braids-johannesburg.jpg">
+
+    <link rel="icon" type="image/png" href="IMAGES/favicon.png">
+    <link rel="apple-touch-icon" href="IMAGES/radiance-studio-logo-220.png">
+
+    <!-- Performance: warm up the font connection, then load the stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Jost:wght@300;400;500;600&amp;display=swap">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script src="js/vendor/jquery.min.js" defer></script>
+    <script src="js/services-data.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/services.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
     <header>
-      
-        <img src="IMAGES/studioo.png" alt="Radiance Studio Logo" class="logo">
-        <nav>
-            <a href="home page.html">home</a>
-            <a href="about us.html">about us</a>
-            <a href="services.html" aria-current="page">service</a>
+        <a class="brand" href="index.html" aria-label="Radiance Studio, home">
+            <picture>
+                <source srcset="IMAGES/radiance-studio-logo-220.webp" type="image/webp">
+                <img src="IMAGES/radiance-studio-logo-220.png" alt="Radiance Studio logo" class="logo" width="110" height="110">
+            </picture>
+        </a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle-bar" aria-hidden="true"></span>
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav id="site-nav" aria-label="Main navigation">
+            <a href="index.html">home</a>
+            <a href="about.html">about us</a>
+            <a href="services.html" aria-current="page">services</a>
             <a href="gallery.html">gallery</a>
             <a href="enquiry.html">enquiry</a>
             <a href="contact.html">contact</a>
@@ -20,16 +65,20 @@
     </header>
 
     <div class="hero-intro">
-        <h1>Radiance Studio</h1>
+        <p class="eyebrow">Hair studio &middot; Johannesburg</p>
+        <h1>Hair Services &amp; Prices</h1>
         <p class="tagline">Keeping the Radiance of Your Hair</p>
     </div>
+
     <div class="hero-media">
-        <video width="100%" height="650" controls>
-            <source src="IMAGES/download.mp4" type="video/mp4">
+        <video controls preload="none" playsinline width="360" height="640" poster="IMAGES/showreel-poster.jpg" aria-label="Radiance Studio showreel">
+            <source src="IMAGES/radiance-studio-showreel.mp4" type="video/mp4">
+            <p>Your browser cannot play this video. <a href="IMAGES/radiance-studio-showreel.mp4">Download the showreel</a>.</p>
         </video>
     </div>
 
-    <main>
+    <main id="main">
+
         <section id="services-intro">
             <h2>Our Services</h2>
             <p>
@@ -39,128 +88,100 @@
             </p>
         </section>
 
-        <section id="braiding-styling">
-            <h3>Braiding &amp; Styling</h3>
-            <table border="4">
-                <tr>
-                    <th>Service</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Women's Braiding &amp; Blow-Dry</td>
-                    <td>R350</td>
-                </tr>
-                <tr>
-                    <td>Men's Braiding &amp; Style</td>
-                    <td>R180</td>
-                </tr>
-                <tr>
-                    <td>Children's Braiding (under 12)</td>
-                    <td>R120</td>
-                </tr>
-                <tr>
-                    <td>Special Occasion Braiding (updos, braids with extensions)</td>
-                    <td>from R400</td>
-                </tr>
-                <tr>
-                    <td>locs styling</td>
-                    <td>from R300</td>
-                </tr>
-                <tr>
-                    <td>starter locs</td>
-                    <td>from R200</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="colouring">
-            <h3>Colouring</h3>
-            <table border="4">
-                <tr>
-                    <th>Service</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Full Head Colour</td>
-                    <td>from R650</td>
-                </tr>
-                <tr>
-                    <td>Highlights / Balayage</td>
-                    <td>from R850</td>
-                </tr>
-                <tr>
-                    <td>Root Touch-Up</td>
-                    <td>from R450</td>
-                </tr>
-                <tr>
-                    <td>Colour Correction</td>
-                    <td>price on consultation</td>
-                </tr>
-                <tr>
-                    <td>locs colouring</td>
-                    <td>price on consultation</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="treatments">
-            <h3>Hair Treatments</h3>
-            <table border="4">
-                <tr>
-                    <th>Service</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>Deep Conditioning Treatment</td>
-                    <td>R300</td>
-                </tr>
-                <tr>
-                    <td>Keratin Smoothing Treatment</td>
-                    <td>from R900</td>
-                </tr>
-                <tr>
-                    <td>Scalp Treatment</td>
-                    <td>from R250</td>
-                </tr>
-                <tr>
-                    <td>locs treatment</td>
-                    <td>price on consultation</td>
-                </tr>
-            </table>
-        </section>
-
-        <section id="extras">
-            <h3>Extensions &amp; Bridal</h3>
-            <table border="4">
-                <tr>
-                    <th>Service</th>
-                    <th>Price</th>
-                </tr>
-                <tr>
-                    <td>hair relaxer (application)</td>
-                    <td>from R90</td>
-                </tr>
-                <tr>
-                    <td>Bridal Hair (covers up to 5 people)</td>
-                    <td>from R1,000</td>
-                </tr>
-                <tr>
-                    <td>wig installation</td>
-                    <td>from R500</td>
-                </tr>
-                <tr>
-                    <td>matric discount (for wigs)</td>
-                    <td>price on consultation</td>
-                </tr>
-            </table>
+        <section id="services-app" aria-label="Services price list">
+            <div class="svc-toolbar">
+                <div class="field svc-search">
+                    <label for="svc-search">Search services</label>
+                    <input type="search" id="svc-search" name="q" placeholder="Try &ldquo;locs&rdquo;, &ldquo;balayage&rdquo; or &ldquo;bridal&rdquo;" autocomplete="off" maxlength="60">
+                </div>
+                <div class="field svc-sort">
+                    <label for="svc-sort">Sort by</label>
+                    <select id="svc-sort" name="sort">
+                        <option value="default">Featured order</option>
+                        <option value="price-asc">Price: low to high</option>
+                        <option value="price-desc">Price: high to low</option>
+                        <option value="name-asc">Name: A to Z</option>
+                        <option value="name-desc">Name: Z to A</option>
+                    </select>
+                </div>
+                <button type="button" id="svc-reset" class="link-btn">Reset</button>
+            </div>
+            <div id="svc-tabs" role="tablist" aria-label="Service categories"></div>
+            <p id="svc-count" class="small" role="status" aria-live="polite"></p>
+            <div id="svc-results" role="tabpanel" aria-live="polite"></div>
+<noscript>
+<p class="small">JavaScript is switched off, so here is the full price list.</p>
+<h3>Braiding &amp; Styling</h3>
+<table><thead><tr><th scope="col">Service</th><th scope="col">Price</th></tr></thead><tbody>
+<tr><td>Women's Braiding &amp; Blow-Dry</td><td class="price">R350</td></tr>
+<tr><td>Men's Braiding &amp; Style</td><td class="price">R180</td></tr>
+<tr><td>Children’s Braiding (under 12)</td><td class="price">R120</td></tr>
+<tr><td>Special Occasion Braiding (updos, braids with extensions)</td><td class="price">from R400</td></tr>
+<tr><td>Locs Styling</td><td class="price">from R300</td></tr>
+<tr><td>Starter Locs</td><td class="price">from R200</td></tr>
+</tbody></table>
+<h3>Colouring</h3>
+<table><thead><tr><th scope="col">Service</th><th scope="col">Price</th></tr></thead><tbody>
+<tr><td>Full Head Colour</td><td class="price">from R650</td></tr>
+<tr><td>Highlights / Balayage</td><td class="price">from R850</td></tr>
+<tr><td>Root Touch-Up</td><td class="price">from R450</td></tr>
+<tr><td>Colour Correction</td><td class="price">price on consultation</td></tr>
+<tr><td>Locs Colouring</td><td class="price">price on consultation</td></tr>
+</tbody></table>
+<h3>Hair Treatments</h3>
+<table><thead><tr><th scope="col">Service</th><th scope="col">Price</th></tr></thead><tbody>
+<tr><td>Deep Conditioning Treatment</td><td class="price">R300</td></tr>
+<tr><td>Keratin Smoothing Treatment</td><td class="price">from R900</td></tr>
+<tr><td>Scalp Treatment</td><td class="price">from R250</td></tr>
+<tr><td>Locs Treatment</td><td class="price">price on consultation</td></tr>
+</tbody></table>
+<h3>Extensions &amp; Bridal</h3>
+<table><thead><tr><th scope="col">Service</th><th scope="col">Price</th></tr></thead><tbody>
+<tr><td>Hair Relaxer (application)</td><td class="price">from R90</td></tr>
+<tr><td>Bridal Hair (covers up to 5 people)</td><td class="price">from R1,000</td></tr>
+<tr><td>Wig Installation</td><td class="price">from R500</td></tr>
+<tr><td>Matric Discount (for wigs)</td><td class="price">price on consultation</td></tr>
+</tbody></table>
+</noscript>
         </section>
 
         <section id="booking-cta">
             <p>Ready to book? <a class="btn" href="enquiry.html">Get in touch</a></p>
         </section>
+
     </main>
 
-    <footer>&copy;ST10524275</footer>
-    
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-brand">Radiance Studio</p>
+                <p>Keeping the Radiance of Your Hair</p>
+                <p class="footer-small">Braiding, locs, colour, wigs and treatments in Johannesburg.</p>
+            </div>
+            <div>
+                <p class="footer-title">Explore</p>
+                <ul class="footer-links">
+                    <li><a href="services.html">Services &amp; prices</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="enquiry.html">Online enquiry</a></li>
+                    <li><a href="about.html">Meet the team</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-title">Visit us</p>
+                <p class="footer-small">Sandton: 14 Rivonia Road<br>011 555 0182<br>Rosebank: 22 Baker Street<br>011 555 0247<br>Mon &ndash; Sat, 08:00 &ndash; 18:00</p>
+            </div>
+            <div>
+                <p class="footer-title">Share this page</p>
+                <ul class="share-links">
+                    <li><a data-share="facebook" href="https://www.facebook.com/sharer/sharer.php" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                    <li><a data-share="whatsapp" href="https://wa.me/" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+                    <li><a data-share="pinterest" href="https://pinterest.com/pin/create/button/" target="_blank" rel="noopener noreferrer">Pinterest</a></li>
+                    <li><a data-share="x" href="https://twitter.com/intent/tweet" target="_blank" rel="noopener noreferrer">X</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy;ST10524275</p>
+    </footer>
 </body>
 </html>
