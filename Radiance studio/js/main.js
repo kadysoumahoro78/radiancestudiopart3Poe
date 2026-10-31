@@ -327,3 +327,15 @@
   });
 
 })(jQuery);
+// Live date and time in the footer
+function updateDateTime() {
+    const el = document.getElementById('datetime');
+    if (!el) return;                       // page has no footer clock, do nothing
+    const options = {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+    };
+    el.textContent = new Date().toLocaleString('en-ZA', options);
+}
+updateDateTime();                          // show it immediately
+setInterval(updateDateTime, 1000);         // then refresh every second
